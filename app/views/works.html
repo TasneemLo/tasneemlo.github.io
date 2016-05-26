@@ -1,0 +1,8 @@
+<div class="container">
+  <h1 class="center">Works</h1>
+  <ul>
+    <li ng-repeat="work in works | filter:filterParam | orderBy:'creationDate'">
+      {{work.title}} - {{work.creationDate}}
+    </li>
+  </ul>
+</div>
