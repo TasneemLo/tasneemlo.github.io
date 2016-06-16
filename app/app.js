@@ -5,20 +5,16 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'app/views/home.html',
-        controller: 'HomeCtrl'
+        templateUrl: 'app/views/home.html'
       })
       .when('/about', {
-        templateUrl: 'app/views/about.html',
-        controller: 'AboutCtrl'
+        templateUrl: 'app/views/about.html'
       })
       .when('/contact', {
-        templateUrl: 'app/views/contact.html',
-        controller: 'ContactCtrl'
+        templateUrl: 'app/views/contact.html'
       })
       .when('/gallery', {
-        templateUrl: 'app/views/gallery.html',
-        controller: 'GalleryCtrl'
+        templateUrl: 'app/views/gallery.html'
       })
       .when('/works', {
         templateUrl: 'app/views/works.html',
@@ -29,8 +25,7 @@ angular
         controller: 'WorkCtrl'
       })
       .when('/404', {
-        templateUrl: 'app/views/404.html',
-        controller: 'NotFoundCtrl'
+        templateUrl: 'app/views/404.html'
       })
       .otherwise({
         redirectTo: '/'

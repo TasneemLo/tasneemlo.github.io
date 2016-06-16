@@ -1,16 +1,6 @@
 'use strict';
 
 angular.module('mainApp')
-  .controller('HomeCtrl', function ($scope) {
-  })
-  .controller('AboutCtrl', function ($scope) {
-  })
-  .controller('ContactCtrl', function ($scope) {
-  })
-  .controller('GalleryCtrl', function ($scope) {
-  })
-  .controller('NotFoundCtrl', function($scope) {
-  })
   .controller('WorksCtrl', function ($scope, $location, $routeParams,
                                      DataStore) {
     DataStore.works.then(function(response) {
