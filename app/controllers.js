@@ -9,11 +9,19 @@ angular.module('mainApp')
   })
   .controller('GalleryCtrl', function ($scope) {
   })
-  .controller('WorksCtrl', function ($scope, $routeParams, DataStore) {
+  .controller('NotFoundCtrl', function($scope) {
+  })
+  .controller('WorksCtrl', function ($scope, $location, $routeParams,
+                                     DataStore) {
     DataStore.works.then(function(response) {
       $scope.works = response.data;
     });
-    $scope.filterParam = angular.fromJson($routeParams.filter);
+    try {
+      $scope.filterParam = angular.fromJson($routeParams.filter);
+    } catch (err) {
+      console.log("Did not receive a valid 'filter' routeParam - " + err);
+      $location.path("/404");
+    }
   })
   .controller('WorkCtrl', function ($scope, $routeParams, DataStore) {
     DataStore.works.then(function(response) {

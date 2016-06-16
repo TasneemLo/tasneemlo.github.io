@@ -28,6 +28,10 @@ angular
         templateUrl: 'app/views/work.html',
         controller: 'WorkCtrl'
       })
+      .when('/404', {
+        templateUrl: 'app/views/404.html',
+        controller: 'NotFoundCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
