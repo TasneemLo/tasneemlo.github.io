@@ -22,9 +22,77 @@
     .main-ng-view {
       padding-top: 56px;
     }
+
+    /* ng-animate for page transition. Taken from:
+       http://www.edureka.co/blog/animating-angular-apps-with-nganimate/
+       http://tympanus.net/Development/PageTransitions/
+       https://github.com/dfsq/ngView-animation-effects
+    */
+    .view.ng-leave {
+      z-index:9999;
+    }
+    .view.ng-enter {
+      z-index:8888;
+    }
+    @-webkit-keyframes rotateFall {
+      0% { -webkit-transform: rotateZ(0deg); }
+      20% { -webkit-transform: rotateZ(10deg);
+            -webkit-animation-timing-function: ease-out; }
+      40% { -webkit-transform: rotateZ(17deg); }
+      60% { -webkit-transform: rotateZ(16deg); }
+      100% { -webkit-transform: translateY(100%) rotateZ(17deg); }
+    }
+    @-moz-keyframes rotateFall {
+      0% { -moz-transform: rotateZ(0deg); }
+      20% { -moz-transform: rotateZ(10deg);
+            -moz-animation-timing-function: ease-out; }
+      40% { -moz-transform: rotateZ(17deg); }
+      60% { -moz-transform: rotateZ(16deg); }
+      100% { -moz-transform: translateY(100%) rotateZ(17deg); }
+    }
+    @keyframes rotateFall {
+      0% { transform: rotateZ(0deg); }
+      20% { transform: rotateZ(10deg);
+            animation-timing-function: ease-out; }
+      40% { transform: rotateZ(17deg); }
+      60% { transform: rotateZ(16deg); }
+      100% { transform: translateY(100%) rotateZ(17deg); }
+    }
+    @keyframes slideOutLeft {
+      to    { transform: translateX(-100%); }
+    }
+    @-moz-keyframes slideOutLeft {
+      to    { -moz-transform: translateX(-100%); }
+    }
+    @-webkit-keyframes slideOutLeft {
+      to    { -webkit-transform: translateX(-100%); }
+    }
+    @keyframes slideInRight {
+      from  { transform:translateX(100%); }
+      to    { transform: translateX(0); }
+    }
+    @-moz-keyframes slideInRight {
+      from  { -moz-transform:translateX(100%); }
+      to    { -moz-transform: translateX(0); }
+    }
+    @-webkit-keyframes slideInRight {
+      from  { -webkit-transform:translateX(100%); }
+      to    { -webkit-transform: translateX(0); }
+    }
+    .view.ng-leave {
+      -webkit-animation: slideOutLeft 0.5s both ease-in;
+      -moz-animation: slideOutLeft 0.5s both ease-in;
+      animation: slideOutLeft 0.5s both ease-in;
+
+    }
+    .view.ng-enter {
+      -webkit-animation: slideInRight 0.5s both ease-in;
+      -moz-animation: slideInRight 0.5s both ease-in;
+      animation: slideInRight 0.5s both ease-in;
+    }
     </style>
   </head>
-  <body ng-app="mainApp">
+  <body ng-app="mainApp" class="content">
     <!--[if lte IE 8]>
       <p class="browsehappy">
         You are using an <strong>outdated</strong> browser. Please
@@ -60,12 +128,12 @@
       </div>
     </div>
 
-    <div ng-view="" class="main-ng-view"></div>
+    <div ng-view="" class="main-ng-view view rotate-fall"></div>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
-    <!-- <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script> -->
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
 
     <script src="app/app.js"></script>
