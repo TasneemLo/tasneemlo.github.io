@@ -1,0 +1,7 @@
+<h1 class="center">There was an error :(</h1>
+<div class="container" ng-if="errorMsg">
+  <div class="col-md-offset-2 col-md-8">
+    <div class="alert alert-danger" ng-bind-html="errorMsg | trustedHTML">
+    </div>
+  </div>
+</div>

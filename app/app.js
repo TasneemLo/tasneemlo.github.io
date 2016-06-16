@@ -28,8 +28,9 @@ angular
         templateUrl: 'app/views/work.html',
         controller: 'SingleWorkCtrl'
       })
-      .when('/404', {
-        templateUrl: 'app/views/404.html'
+      .when('/error', {
+        templateUrl: 'app/views/error.html',
+        'controller': 'ErrorCtrl'
       })
       .otherwise({
         redirectTo: '/'
