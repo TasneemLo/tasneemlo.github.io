@@ -1,6 +1,9 @@
 'use strict';
 
 angular.module('mainApp')
+  .controller('NavBarCtrl', ['$scope', function($scope) {
+    $scope.isCollapsed = true;
+  }])
   .controller('FilterWorkCtrl',
               ['$scope', '$routeParams', 'filterWorks',
                function ($scope, $routeParams, filterWorks) {
