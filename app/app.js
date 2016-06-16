@@ -20,6 +20,10 @@ angular
         templateUrl: 'app/views/works.html',
         controller: 'WorksCtrl'
       })
+      .when('/works/:filterKey/:filterVal', {
+        templateUrl: 'app/views/works.html',
+        controller: 'SingleWorksCtrl'
+      })
       .when('/work/:workID', {
         templateUrl: 'app/views/work.html',
         controller: 'WorkCtrl'
