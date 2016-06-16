@@ -1,3 +1,90 @@
-<div class="container">
-  <h1 class="center">Gallery</h1>
+<style>
+.main-ng-view {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  padding-top: 56px;
+  display: table;
+}
+
+.main-box {
+  vertical-align: middle;
+  display: table-cell;
+  width: 100%;
+}
+
+.tile {
+  position: relative;
+  display: table;
+  height: 30%;
+  margin: 1%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*
+.tile .photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform 1s ease-out;
+}*/
+
+#paintings {
+  background: url('http://ultraimg.com/images/0yS4A9e.jpg');
+  background-position: center 25%;
+}
+
+#sculptures {
+  background: url('http://ultraimg.com/images/hzQ2IGW.jpg');
+  background-position: center 25%;
+}
+
+#installations {
+  background: url('http://ultraimg.com/images/bNeWGWB.jpg');
+  background-position: center 25%;
+}
+
+@keyframes move-up-down {
+  0% {background-position: center 25%;}
+  12% {background-position: center 0%;}
+  62% {background-position: center 100%;}
+  100% {background-position: center 25%;}
+}
+
+.tile:hover {
+  animation-name: move-up-down;
+  animation-duration: 20s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.tile .text {
+  vertical-align: middle;
+  display: table-cell;
+  width: 100%;
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+  /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+  text-shadow: 2px 2px black;
+}
+</style>
+
+<div class="container main-box">
+  <div class="container center tile" id="paintings">
+    <div class="text">PAINTINGS</div>
+  </div>
+  <div class="container center tile" id="sculptures">
+    <div class="text">SCULPTURES</div>
+  </div>
+  <div class="container center tile" id="installations">
+    <div class="text">INSTALLATONS</div>
+  </div>
 </div>
