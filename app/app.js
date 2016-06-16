@@ -18,15 +18,15 @@ angular
       })
       .when('/works', {
         templateUrl: 'app/views/works.html',
-        controller: 'WorksCtrl'
+        controller: 'FilterWorkCtrl'
       })
       .when('/works/:filterKey/:filterVal', {
         templateUrl: 'app/views/works.html',
-        controller: 'SingleWorksCtrl'
+        controller: 'MultiWorkCtrl'
       })
-      .when('/work/:workID', {
+      .when('/work/:filterKey/:filterVal', {
         templateUrl: 'app/views/work.html',
-        controller: 'WorkCtrl'
+        controller: 'SingleWorkCtrl'
       })
       .when('/404', {
         templateUrl: 'app/views/404.html'
