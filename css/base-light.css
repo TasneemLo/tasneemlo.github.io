@@ -1,0 +1,321 @@
+/* =Table of Contents
+--------------------------------------------------------------
+    =Common Styles
+    =Typography
+    =Buttons
+    =Progress Bars
+    =Tabs
+    =Panels
+    =Thumbnails
+    =Accordion
+    =Call to Action
+    =Navigation
+    =Jumbotron Main
+    =Hello Intro
+    =About
+    =Work
+    =Timeline
+    =Contact + Map
+    =Media Queries
+*/
+
+/* =Common Styles
+-------------------------------------------------------------- */
+.logo {
+    color: #424242;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #7B7B7B;
+}
+
+.section-title h2 {
+    color: #414141;
+}
+
+.section-divider {
+    background-color: rgba(66, 66, 66, 0.15);
+}
+
+.heading-1 {
+    color: #424242;
+    border-color: #cecece;
+}
+
+.heading-2 {
+    color: #fff;
+    border-bottom: 1px dotted #666;
+}
+
+.heading-3 {
+    color: #424242;
+}
+
+.heading-3-icon {
+    color: #9A9A9A;
+}
+
+.breadcrumb-holder {
+    background: #fff;
+}
+
+.breadcrumb a {
+    color: #414141;
+}
+
+.breadcrumb-home {
+    color: #414141;
+}
+
+.breadcrumb-holder h1 {
+    color: #414141;
+}
+
+.breadcrumb>li+li:before {
+    color: #C1C1C1;
+}
+
+.mini-hr {
+    border-color: #424242;
+}
+
+.background1 { background-color: #f5f5f5; }
+.background2 { background-color: #fff; }
+
+#iconfonts { color: #fff;}
+#iconfonts h2 { color: #fff; }
+
+.theme-changer .form-holder {
+    background-color: #fff;
+    border: 1px solid #E6E6E6;
+}
+
+.theme-changer h4 {
+    color: #424242;
+}
+
+.theme-changer hr {
+    border-color: #E4E4E4;
+}
+
+/* =Typography
+-------------------------------------------------------------- */
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: #414141;
+}
+
+.lead strong {
+    color: #414141;
+}
+
+.text-switch {
+    color: #424242;
+}
+
+/* =Buttons
+-------------------------------------------------------------- */
+.btn-default {
+    color: #424242;
+    border-color: #cecece;
+}
+
+.btn-default.disabled.focus, .btn-default.disabled:focus, .btn-default.disabled:hover, .btn-default[disabled].focus, .btn-default[disabled]:focus, .btn-default[disabled]:hover, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default:hover {
+    color: #fff;
+}
+
+.btn-primary.disabled.focus, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled].focus, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover {
+    color: #fff;
+    background-color: #615fde;
+    border-color: #615fde;
+}
+
+.btn-light {
+    color: #757575;
+    border-color: #B1B1B1;
+}
+
+/* =Progress Bars
+-------------------------------------------------------------- */
+.progress {
+    border: 1px solid #cecece;
+}
+
+.progress-meter {
+    border-bottom: 1px solid #cecece;
+}
+
+.progress-meter > .meter {
+    border-color: #cecece;
+}
+
+.progress-meter > .meter > .meter-text {
+    color: #606060;
+}
+
+/* =Tabs
+-------------------------------------------------------------- */
+.nav-tabs {
+    border-bottom: none;
+}
+
+.tab-content.tab-default {
+    border: 1px solid #cecece;
+}
+
+.tab-pane::first-letter { 
+    color: #414141;
+}
+
+/* =Panels
+-------------------------------------------------------------- */
+.panel-group .panel-heading+.panel-collapse>.list-group, .panel-group .panel-heading+.panel-collapse>.panel-body {
+    border-top: 1px solid #cecece;
+}
+
+.panel-default>.panel-heading {
+    color: #424242;
+    background-color: transparent;
+    border-color: #E4E4E4;
+}
+
+.panel-default {
+    background-color: transparent;
+    border: 1px solid #cecece;
+}
+
+/* =Thumbnails
+-------------------------------------------------------------- */
+.thumbnail {
+    border: 1px solid #cecece;
+}
+
+/* =Modals
+-------------------------------------------------------------- */
+.modal-content {
+    border-radius: 0 !important;
+}
+
+.modal-body p {
+    color: #737373;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.close {
+    color: #fff;
+}
+
+/* =Navigation
+-------------------------------------------------------------- */
+.navbar-default {
+    background: #fff;
+    border-bottom: 2px solid #E6E6E6;
+}
+
+.navbar-default .navbar-header .navbar-brand {
+    color: #000000;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #424242;
+}
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+    color: rgba(78, 78, 78, 0.5);
+}
+
+.dropdown-menu > li > a {
+    color: #424242;
+}
+
+.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
+    color: rgba(78, 78, 78, 0.5);
+}
+
+.dropdown-menu {
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #EAEAEA;
+}
+
+/* =Hello Intro
+-------------------------------------------------------------- */
+#hello-intro h2 {
+    color: #414141;
+    border-color: #cecece;
+}
+
+#hello-intro h3 {
+    color: #848484;
+}
+
+#hello-intro h3 strong {
+    font-weight: 300;
+}
+
+
+/* =About
+-------------------------------------------------------------- */
+.logo-about {
+    color: #424242;
+}
+
+/* =Work
+-------------------------------------------------------------- */
+.btn-category {
+    border: 2px solid #C5C5C5;
+}
+
+.portfolio-image-holder:before {
+    border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+span.portfolio-hover a {
+    color: #fff;
+}
+
+.portfolio-hover h3 {
+    color: #fff;
+}
+
+/* =Timeline
+-------------------------------------------------------------- */
+.timeline:before {
+    background-color: #E2E2E2;
+}
+
+.timeline > li .timeline-image {
+    background-color: #d2d2d2;
+    color: #fff;
+    border: 4px solid #d2d2d2;
+}
+
+/* =Contact + Map
+-------------------------------------------------------------- */
+#contact .form-control {
+    color: #a1a1a1;
+    border-bottom: 2px solid #ECECEC;
+}
+
+.has-error .form-control {
+    border-color: #2F2F2F;
+}
+
+.has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label, .has-error.radio-inline label {
+    color: #929292;
+}
+
+.has-error .form-control:focus {
+    border-color: #2F2F2F;
+}
+
+/* =Media Queries
+-------------------------------------------------------------- */
+@media (max-width:767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a { color:#424242; }
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus, .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover { color:rgba(78, 78, 78, 0.5); }
+}
